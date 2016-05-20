@@ -1,0 +1,2014 @@
+Model {
+  Name			  "Universal_discrete_simulation_75"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.234"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Oct 23 11:42:13 2001"
+  Creator		  "Eric"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Eric"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Mar 19 10:44:34 2011"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:234>"
+  ConfigurationManager	  "none"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "0.0"
+	  StopTime		  "simulation_horizon"
+	  AbsTol		  "1e-6"
+	  FixedStep		  "Ts"
+	  InitialStep		  "0.001"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-8"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "sigsOut"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  on
+	  BooleanDataType	  off
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"none"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskCondExecSysMsg "none"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "None"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  on
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  on
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      IntegratorMethod	      "Integration: Forward Euler"
+      gainval		      "1.0"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      InitialConditionMode    "State and output"
+      SampleTime	      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      IgnoreLimit	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      DiscreteStateSpace
+      A			      "1"
+      B			      "1"
+      C			      "1"
+      D			      "1"
+      X0		      "0"
+      SampleTime	      "1"
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RandomNumber
+      Mean		      "0"
+      Variance		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      Step
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Universal_discrete_simulation_75"
+    Location		    [5, 127, 1061, 668]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "rotated"
+    PaperPositionMode	    "auto"
+    PaperType		    "a4letter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Gain
+      Name		      "Ci"
+      Position		      [725, 243, 775, 287]
+      Orientation	      "left"
+      BackgroundColor	      "[0.921569, 0.862745, 0.313725]"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "Si"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Cm"
+      Position		      [695, 188, 755, 232]
+      BackgroundColor	      "[0.921569, 0.862745, 0.313725]"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "Cm"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      Port {
+	PortNumber		1
+	Name			"y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Comparison\nreal-estimate"
+      Ports		      [2]
+      Position		      [995, 281, 1030, 354]
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [162, 274, 522, 762]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      YMin		      "-0.1~-0.2"
+      YMax		      "0.3~0.2"
+      SaveToWorkspace	      on
+      SaveName		      "CompareScope"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux\nx"
+      Ports		      [1, 4]
+      Position		      [745, 18, 750, 77]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Outputs		      "n"
+      Port {
+	PortNumber		1
+	Name			"x1"
+	PropagatedSignals	"x1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"x2"
+	PropagatedSignals	"x2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      Ports		      [1, 4]
+      Position		      [845, 392, 850, 463]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Outputs		      "n"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux2"
+      Ports		      [1, 2]
+      Position		      [930, 189, 935, 231]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Outputs		      "q"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Discrete\ncontrol"
+      Ports		      [1]
+      Position		      [520, 15, 550, 55]
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [115, 519, 440, 762]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-0.2"
+      YMax		      "1"
+      SaveToWorkspace	      on
+      SaveName		      "ControlScope"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      DiscreteIntegrator
+      Name		      "Discrete\nintegrator"
+      Ports		      [1, 1]
+      Position		      [250, 180, 285, 220]
+      BackgroundColor	      "[0.666667, 0.666667, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      IntegratorMethod	      "Integration: Forward Euler"
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      SampleTime	      "Ts"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      ICPrevOutput	      "DiscIntNeverNeededParam"
+      ICPrevScaledInput	      "DiscIntNeverNeededParam"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Discrete\nmeasurements"
+      Ports		      [2]
+      Position		      [965, 188, 1000, 232]
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [659, 236, 1019, 762]
+      Open		      off
+      NumInputPorts	      "2"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      YMin		      "0~-5"
+      YMax		      "2.5~5"
+      SaveToWorkspace	      on
+      SaveName		      "MeasurementScope"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      DiscreteStateSpace
+      Name		      "Discrete generalized\nobserver"
+      Position		      [585, 345, 700, 385]
+      Orientation	      "left"
+      BackgroundColor	      "[1.000000, 0.741176, 0.741176]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      A			      "F"
+      B			      "[J G]"
+      C			      "H"
+      D			      "[zeros(n,p)  K]"
+      X0		      "[z0]"
+      SampleTime	      "Ts"
+      Port {
+	PortNumber		1
+	Name			"xe"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      DiscreteStateSpace
+      Name		      "Discrete plant model"
+      Position		      [525, 186, 640, 234]
+      BackgroundColor	      "[0.921569, 0.862745, 0.313725]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      A			      "Phi"
+      B			      "[Gamma E]"
+      C			      "eye(n)"
+      D			      "zeros(n,p+size(E,2))"
+      X0		      "[x0]"
+      SampleTime	      "Ts"
+      Port {
+	PortNumber		1
+	Name			"x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Estimated discrete\nstate"
+      Ports		      [4]
+      Position		      [910, 396, 950, 459]
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [105, 162, 462, 762]
+      Open		      off
+      NumInputPorts	      "4"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+      }
+      YMin		      "-0.1~-0.2~-5~-5"
+      YMax		      "0.3~0.2~5~5"
+      SaveToWorkspace	      on
+      SaveName		      "EstimateScope"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "200000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Feedforward"
+      Ports		      [1]
+      Position		      [305, 20, 335, 60]
+      Orientation	      "left"
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [434, 73, 758, 316]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-2"
+      YMax		      "4"
+      SaveName		      "ScopeData3"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [545, 145, 565, 165]
+      Orientation	      "left"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground1"
+      Position		      [935, 155, 955, 175]
+      Orientation	      "left"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground2"
+      Position		      [275, 140, 295, 160]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Integrated error"
+      Ports		      [1]
+      Position		      [325, 295, 355, 335]
+      Orientation	      "left"
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [344, 513, 668, 762]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      YMin		      "-2"
+      YMax		      "0"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "L1"
+      Position		      [425, 313, 485, 357]
+      Orientation	      "left"
+      BackgroundColor	      "[0.000000, 1.000000, 0.000000]"
+      DropShadow	      on
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "L1"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "L2"
+      Position		      [305, 171, 375, 229]
+      BackgroundColor	      "[0.000000, 1.000000, 0.000000]"
+      DropShadow	      on
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "L2/Ts"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Load\ndisturbance"
+      Position		      [610, 110, 640, 140]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      Time		      "start_p_load"
+      Before		      "[0]"
+      After		      "p_load*Ts"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "M"
+      Position		      [220, 91, 270, 139]
+      BackgroundColor	      "[1.000000, 0.690196, 1.000000]"
+      DropShadow	      on
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "M"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "M1"
+      Position		      [145, 90, 195, 140]
+      BackgroundColor	      "[1.000000, 0.690196, 1.000000]"
+      DropShadow	      on
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "Sc"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Measurement\ndisturbance"
+      Position		      [995, 120, 1025, 150]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      Time		      "start_p_measurements"
+      Before		      "[0]"
+      After		      "p_measurements"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [2, 1]
+      Position		      [725, 346, 730, 384]
+      Orientation	      "left"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Pseudo-\nwhite\nnoise V"
+      Ports		      [0, 1]
+      Position		      [615, 15, 645, 45]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Sources/Band-Limited\nWhite Noise"
+      SourceType	      "Band-Limited White Noise."
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      Cov		      "eqn_pwr"
+      Ts		      "Ts"
+      seed		      "eqn_seed"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Pseudo-\nwhite\nnoise W"
+      Ports		      [0, 1]
+      Position		      [995, 30, 1025, 60]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Sources/Band-Limited\nWhite Noise"
+      SourceType	      "Band-Limited White Noise."
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      Cov		      "meas_pwr"
+      Ts		      "Ts"
+      seed		      "meas_seed"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      Name		      "Pulse\ngenerator"
+      Ports		      [0, 1]
+      Position		      [15, 173, 60, 207]
+      FontName		      "Arial"
+      FontSize		      12
+      PulseType		      "Time based"
+      Amplitude		      "yr"
+      Period		      "simulation_horizon/2"
+      PulseWidth	      "50"
+      SampleTime	      "Te"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Real discrete\nstate"
+      Ports		      [4]
+      Position		      [870, 12, 910, 83]
+      BackgroundColor	      "[0.501961, 1.000000, 1.000000]"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      12
+      Floating		      off
+      Location		      [513, 162, 873, 762]
+      Open		      off
+      NumInputPorts	      "4"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+      }
+      YMin		      "-0.1~-0.2~-5~-5"
+      YMax		      "0.3~0.2~5~5"
+      SaveToWorkspace	      on
+      SaveName		      "StateScope"
+      DataFormat	      "StructureWithTime"
+      MaxDataPoints	      "100000"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S1"
+      Ports		      [2, 1]
+      Position		      [85, 135, 120, 175]
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "1"
+      action		      "0"
+      varsize		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S2"
+      Ports		      [2, 1]
+      Position		      [320, 107, 350, 143]
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "1"
+      action		      "0"
+      varsize		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S3"
+      Ports		      [2, 1]
+      Position		      [485, 110, 520, 150]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "0"
+      action		      "0"
+      varsize		      off
+      Port {
+	PortNumber		1
+	Name			"v"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S4"
+      Ports		      [2, 1]
+      Position		      [880, 122, 910, 158]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "0"
+      action		      "0"
+      varsize		      off
+      Port {
+	PortNumber		1
+	Name			"w"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S5"
+      Ports		      [2, 1]
+      Position		      [510, 317, 540, 353]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "1"
+      action		      "0"
+      varsize		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S6"
+      Ports		      [2, 1]
+      Position		      [540, 80, 575, 120]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "0"
+      action		      "0"
+      varsize		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "S7"
+      Ports		      [2, 1]
+      Position		      [930, 92, 960, 128]
+      Orientation	      "left"
+      FontName		      "Arial"
+      FontSize		      12
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      sw		      "0"
+      action		      "0"
+      varsize		      off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Si"
+      Position		      [145, 176, 190, 224]
+      BackgroundColor	      "[0.000000, 1.000000, 0.000000]"
+      DropShadow	      on
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Gain		      "Si"
+      Multiplication	      "Matrix(K*u)"
+      ParameterDataType	      "sfix(16)"
+      ParameterScaling	      "2^0"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step"
+      Position		      [25, 95, 55, 125]
+      FontName		      "Arial"
+      FontSize		      12
+      Time		      "start_reference"
+      Before		      "[0]"
+      After		      "yr"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [215, 190, 235, 210]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      IconShape		      "round"
+      Inputs		      "|+-"
+      CollapseMode	      "All dimensions"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [3, 1]
+      Position		      [405, 190, 425, 210]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      IconShape		      "round"
+      Inputs		      "+--"
+      CollapseMode	      "All dimensions"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      Port {
+	PortNumber		1
+	Name			"u"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Ports		      [2, 1]
+      Position		      [780, 200, 800, 220]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      IconShape		      "round"
+      Inputs		      "++|"
+      CollapseMode	      "All dimensions"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      Port {
+	PortNumber		1
+	Name			"y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold1"
+      Position		      [875, 197, 900, 223]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      SampleTime	      "Ts"
+      Port {
+	PortNumber		1
+	Name			"y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold2"
+      Position		      [690, 31, 725, 69]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      SampleTime	      "Ts"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold3"
+      Position		      [465, 16, 500, 54]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      SampleTime	      "Ts"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "[u v]"
+      Ports		      [2, 1]
+      Position		      [495, 191, 500, 229]
+      FontName		      "Arial"
+      FontSize		      12
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "[u v]1"
+      Ports		      [2, 1]
+      Position		      [970, 319, 975, 346]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "[u v]2"
+      Ports		      [2, 1]
+      Position		      [970, 284, 975, 311]
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Discrete\nintegrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Discrete\nintegrator"
+      SrcPort		      1
+      DstBlock		      "L2"
+      DstPort		      1
+    }
+    Line {
+      Name		      "x2"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [0, 1]
+      SrcBlock		      "Demux\nx"
+      SrcPort		      2
+      Points		      [70, 0]
+      Branch {
+	DstBlock		"Real discrete\nstate"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 285]
+	DstBlock		"[u v]1"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "x1"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [0, 1]
+      SrcBlock		      "Demux\nx"
+      SrcPort		      1
+      Points		      [90, 0]
+      Branch {
+	DstBlock		"Real discrete\nstate"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 265]
+	DstBlock		"[u v]2"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "v"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [1, 1]
+      SrcBlock		      "S3"
+      SrcPort		      1
+      DstBlock		      "[u v]"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      Points		      [-5, 0]
+      DstBlock		      "S3"
+      DstPort		      2
+    }
+    Line {
+      Name		      "x"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [2, 0]
+      SrcBlock		      "Discrete plant model"
+      SrcPort		      1
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"Cm"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -160]
+	DstBlock		"Zero-Order\nHold2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 115]
+	DstBlock		"S5"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Ground1"
+      SrcPort		      1
+      Points		      [-5, 0]
+      DstBlock		      "S4"
+      DstPort		      2
+    }
+    Line {
+      Name		      "u"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [0, 1]
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	DstBlock		"[u v]"
+	DstPort			1
+      }
+      Branch {
+	Labels			[-1, 0]
+	Points			[0, 100; 295, 0]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Zero-Order\nHold3"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "[u v]"
+      SrcPort		      1
+      DstBlock		      "Discrete plant model"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "L1"
+      SrcPort		      1
+      Points		      [-5, 0]
+      DstBlock		      "Sum2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "S2"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	Points			[20, 0]
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -85]
+	DstBlock		"Feedforward"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Ground2"
+      SrcPort		      1
+      Points		      [0, -15]
+      DstBlock		      "S2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "M"
+      SrcPort		      1
+      DstBlock		      "S2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "L2"
+      SrcPort		      1
+      Points		      [0, 0; 5, 0]
+      Branch {
+	DstBlock		"Sum2"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 115]
+	DstBlock		"Integrated error"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux\nx"
+      SrcPort		      3
+      DstBlock		      "Real discrete\nstate"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Ci"
+      SrcPort		      1
+      Points		      [-495, 0]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "Discrete generalized\nobserver"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "S5"
+      SrcPort		      1
+      DstBlock		      "L1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Labels			[1, 0]
+	DstBlock		"Estimated discrete\nstate"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -100]
+	DstBlock		"[u v]2"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      Points		      [25, 0]
+      Branch {
+	DstBlock		"Estimated discrete\nstate"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -80]
+	DstBlock		"[u v]1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Step"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "S1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Pulse\ngenerator"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "S1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "S1"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"Si"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"M1"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "y"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "Cm"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      2
+    }
+    Line {
+      Name		      "y"
+      FontName		      "Arial"
+      FontSize		      12
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      Points		      [0, 0; 5, 0]
+      Branch {
+	DstBlock		"Zero-Order\nHold1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 55]
+	Branch {
+	  Labels		  [-1, 0]
+	  Points		  [0, 110]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Branch {
+	  DstBlock		  "Ci"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      Name		      "w"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [2, 0]
+      SrcBlock		      "S4"
+      SrcPort		      1
+      Points		      [-85, 0]
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Measurement\ndisturbance"
+      SrcPort		      1
+      Points		      [-15, 0]
+      DstBlock		      "S7"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "S7"
+      SrcPort		      1
+      DstBlock		      "S4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Pseudo-\nwhite\nnoise W"
+      SrcPort		      1
+      Points		      [-15, 0]
+      DstBlock		      "S7"
+      DstPort		      1
+    }
+    Line {
+      Name		      "xe"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [0, 0]
+      SrcBlock		      "Discrete generalized\nobserver"
+      SrcPort		      1
+      Points		      [0, 0; -25, 0]
+      Branch {
+	DstBlock		"S5"
+	DstPort			2
+      }
+      Branch {
+	Labels			[-1, 1]
+	Points			[0, 65]
+	DstBlock		"Demux1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "S6"
+      SrcPort		      1
+      DstBlock		      "S3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Pseudo-\nwhite\nnoise V"
+      SrcPort		      1
+      Points		      [-10, 0; 0, 60]
+      DstBlock		      "S6"
+      DstPort		      1
+    }
+    Line {
+      Labels		      [0, 0]
+      SrcBlock		      "Load\ndisturbance"
+      SrcPort		      1
+      Points		      [-5, 0; 0, -15]
+      DstBlock		      "S6"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Zero-Order\nHold2"
+      SrcPort		      1
+      DstBlock		      "Demux\nx"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Zero-Order\nHold3"
+      SrcPort		      1
+      DstBlock		      "Discrete\ncontrol"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Si"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "M1"
+      SrcPort		      1
+      DstBlock		      "M"
+      DstPort		      1
+    }
+    Line {
+      Name		      "y"
+      FontName		      "Arial"
+      FontSize		      12
+      Labels		      [1, 0]
+      SrcBlock		      "Zero-Order\nHold1"
+      SrcPort		      1
+      DstBlock		      "Demux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      1
+      DstBlock		      "Discrete\nmeasurements"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      2
+      DstBlock		      "Discrete\nmeasurements"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "Estimated discrete\nstate"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      DstBlock		      "Estimated discrete\nstate"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Demux\nx"
+      SrcPort		      4
+      DstBlock		      "Real discrete\nstate"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "[u v]2"
+      SrcPort		      1
+      DstBlock		      "Comparison\nreal-estimate"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "[u v]1"
+      SrcPort		      1
+      DstBlock		      "Comparison\nreal-estimate"
+      DstPort		      2
+    }
+  }
+}
